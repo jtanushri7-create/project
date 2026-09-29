@@ -181,6 +181,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between selection:bg-purple-600 selection:text-white">
       <div className="w-full max-w-md mx-auto flex flex-col min-h-screen bg-slate-950 border-x border-slate-900 relative shadow-2xl">
+        <div className="mb-4 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-amber-100">
+        <strong>Student Project Demo:</strong> Security4Her is a demonstration
+        application. SOS, location sharing, and simulated-call features are for
+         educational/demo purposes and should not replace emergency services.
+      </div>
         
         <Header
           onToggleDisguise={() => setIsDisguiseActive(true)}
@@ -226,10 +231,10 @@ export default function App() {
                   </div>
                   <div>
                     <h2 className="text-base font-bold text-white">
-                      Fake Call Escape Trigger
+                      simulated safety call demo
                     </h2>
                     <p className="text-xs text-slate-400">
-                      Discreetly exit uncomfortable or unsafe situations with a realistic incoming call.
+                      Demonstration feature that simulates an incoming call for safety-planning practice.
                     </p>
                   </div>
                 </div>
@@ -245,7 +250,7 @@ export default function App() {
                   className="min-h-[56px] w-full rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 hover:from-purple-500 hover:to-indigo-500 active:scale-[0.98] text-white font-bold text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-purple-950/50 transition-all cursor-pointer"
                 >
                   <PhoneOutgoing className="w-5 h-5" />
-                  <span>Trigger Fake Call (3s Delay)</span>
+                  <span>Start Simulated Calls (3s Delay)</span>
                 </button>
 
                 <div className="grid grid-cols-2 gap-2">
@@ -258,7 +263,7 @@ export default function App() {
                     className="min-h-[46px] rounded-xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 text-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
                   >
                     <Play className="w-3.5 h-3.5 text-teal-400" />
-                    <span>Instant Call (0s)</span>
+                    <span>Instant Simulated Call (0s)</span>
                   </button>
 
                   <button
@@ -282,9 +287,9 @@ export default function App() {
 
                 <div className="grid grid-cols-3 gap-2">
                   {[
-                    { name: 'Mom', num: '+1 (555) 349-2091', script: "Hey honey! Where are you? I'm waiting outside in the car with the hazards on. Come out right now!" },
-                    { name: 'Dad', num: '+1 (555) 882-1920', script: "Hey, I just pulled up to your location. Are you walking out now?" },
-                    { name: 'Roommate Maya', num: '+1 (555) 412-8833', script: "Hey! The Uber is here outside. Meet us at the front entrance in 1 minute." },
+                    { name: 'Demo Contact 1', num: '+1 (555) 010-0001', script: "This is a simulated safety call for demonstration." },
+                    { name: 'Demo Contact 2', num: '+1 (555) 010-0002', script: "This is a simulated safety call for demonstration." },
+                    { name: 'Demo Contact 3', num: '+1 (555) 010-0003', script: "This is a simulated safety call for demonstration." },
                   ].map((preset) => (
                     <button
                       key={preset.name}
